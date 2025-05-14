@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post - InsightfulBlog</title>
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/responsive-adb240d9.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header Section -->
+    <header id="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html">
+              <h1>Insightful<span>Blog</span></h1>
+            </a>
+          </div>
+          <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="category.html?category=technology">Technology</a></li>
+                  <li><a href="category.html?category=lifestyle">Lifestyle</a></li>
+                  <li><a href="category.html?category=travel">Travel</a></li>
+                  <li><a href="category.html?category=food">Food</a></li>
+                  <li><a href="category.html?category=health">Health</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="auth-buttons">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+          </div>
+          <div class="auth-profile hidden">
+            <div class="profile-dropdown">
+              <img src="assets/images/default-avatar.jpg" alt="Profile" class="profile-img">
+              <i class="fas fa-chevron-down"></i>
+              <div class="profile-dropdown-menu">
+                <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                <a href="my-posts.html"><i class="fas fa-file-alt"></i> My Posts</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <main class="post-page">
+      <div class="container">
+        <div class="post-container">
+          <!-- Post content will be loaded dynamically -->
+          <div class="post-loading">
+            <div class="spinner"></div>
+            <p>Loading article...</p>
+          </div>
+        </div>
+        
+        <!-- Author Bio -->
+        <div class="author-bio">
+          <div class="author-image">
+            <img src="assets/images/default-avatar.jpg" alt="John Doe">
+          </div>
+          <div class="author-info">
+            <h3>John Doe</h3>
+            <p class="author-role">Content Writer & Tech Enthusiast</p>
+            <p class="author-desc">John is a seasoned content writer with over 5 years of experience in technology journalism. He has a passion for making complex technical concepts accessible to everyone.</p>
+            <div class="author-social">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Comment Section -->
+        <div class="comments-section">
+          <h2>Comments <span>(3)</span></h2>
+          
+          <!-- Comment Form -->
+          <div class="comment-form">
+            <h3>Leave a Comment</h3>
+            <form id="comment-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="comment-name">Name</label>
+                  <input type="text" id="comment-name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <label for="comment-email">Email</label>
+                  <input type="email" id="comment-email" placeholder="Your email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="comment-content">Comment</label>
+                <textarea id="comment-content" placeholder="Type your comment here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Post Comment</button>
+            </form>
+          </div>
+          
+          <!-- Comments List -->
+          <div class="comments-list">
+            <!-- Comment 1 -->
+            <div class="comment">
+              <div class="comment-avatar">
+                <img src="assets/images/user1.jpg" alt="User">
+              </div>
+              <div class="comment-content">
+                <div class="comment-header">
+                  <h4>Robert Johnson</h4>
+                  <span class="comment-date">2 hours ago</span>
+                </div>
+                <p>This article was incredibly helpful! I've been struggling with optimizing my workflow, and your tips about using modern tools really opened my eyes. Looking forward to implementing these changes.</p>
+                <div class="comment-actions">
+                  <button class="btn-link"><i class="fas fa-reply"></i> Reply</button>
+                  <button class="btn-link"><i class="fas fa-thumbs-up"></i> Like (5)</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Comment 2 -->
+            <div class="comment">
+              <div class="comment-avatar">
+                <img src="assets/images/user2.jpg" alt="User">
+              </div>
+              <div class="comment-content">
+                <div class="comment-header">
+                  <h4>Linda Martinez</h4>
+                  <span class="comment-date">5 hours ago</span>
+                </div>
+                <p>I've been trying different approaches for months, and I'm excited to try your suggestions. The section about using innovative techniques resonated with me. Have you found that it affects your productivity throughout the day?</p>
+                <div class="comment-actions">
+                  <button class="btn-link"><i class="fas fa-reply"></i> Reply</button>
+                  <button class="btn-link"><i class="fas fa-thumbs-up"></i> Like (2)</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Comment 3 with Reply -->
+            <div class="comment">
+              <div class="comment-avatar">
+                <img src="assets/images/user3.jpg" alt="User">
+              </div>
+              <div class="comment-content">
+                <div class="comment-header">
+                  <h4>David Wilson</h4>
+                  <span class="comment-date">Yesterday</span>
+                </div>
+                <p>Great article! One question though - do you think these principles apply to small teams as well as individuals? I'm trying to implement better practices in my startup.</p>
+                <div class="comment-actions">
+                  <button class="btn-link"><i class="fas fa-reply"></i> Reply</button>
+                  <button class="btn-link"><i class="fas fa-thumbs-up"></i> Like (7)</button>
+                </div>
+                
+                <!-- Reply -->
+                <div class="comment-reply">
+                  <div class="comment">
+                    <div class="comment-avatar">
+                      <img src="assets/images/default-avatar.jpg" alt="Author">
+                    </div>
+                    <div class="comment-content">
+                      <div class="comment-header">
+                        <h4>John Doe <span class="author-badge">Author</span></h4>
+                        <span class="comment-date">Yesterday</span>
+                      </div>
+                      <p>Absolutely, David! These principles actually scale quite well to small teams. The key is to establish clear communication channels and make sure everyone is on the same page regarding workflow expectations. I'd be happy to share some team-specific strategies if you're interested.</p>
+                      <div class="comment-actions">
+                        <button class="btn-link"><i class="fas fa-thumbs-up"></i> Like (3)</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Related Posts -->
+        <div class="related-posts">
+          <h2>You Might Also Like</h2>
+          <div class="related-posts-grid">
+            <div class="post-card">
+              <a href="post.html?id=2" class="post-thumbnail">
+                <img src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="How to Create a Perfect Morning Routine">
+              </a>
+              <div class="post-content">
+                <a href="category.html?category=lifestyle" class="post-category">Lifestyle</a>
+                <h3 class="post-title">
+                  <a href="post.html?id=2">How to Create a Perfect Morning Routine</a>
+                </h3>
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="assets/images/user1.jpg" alt="Emily Johnson" class="author-img">
+                    <span>Emily Johnson</span>
+                  </div>
+                  <div class="post-date">January 13, 2025</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="post-card">
+              <a href="post.html?id=4" class="post-thumbnail">
+                <img src="https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Understanding Cryptocurrency: A Beginner's Guide">
+              </a>
+              <div class="post-content">
+                <a href="category.html?category=technology" class="post-category">Technology</a>
+                <h3 class="post-title">
+                  <a href="post.html?id=4">Understanding Cryptocurrency: A Beginner's Guide</a>
+                </h3>
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="assets/images/user3.jpg" alt="Michael Chen" class="author-img">
+                    <span>Michael Chen</span>
+                  </div>
+                  <div class="post-date">January 9, 2025</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="post-card">
+              <a href="post.html?id=7" class="post-thumbnail">
+                <img src="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="The Impact of Artificial Intelligence on Healthcare">
+              </a>
+              <div class="post-content">
+                <a href="category.html?category=technology" class="post-category">Technology</a>
+                <h3 class="post-title">
+                  <a href="post.html?id=7">The Impact of Artificial Intelligence on Healthcare</a>
+                </h3>
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="assets/images/user6.jpg" alt="Robert Johnson" class="author-img">
+                    <span>Robert Johnson</span>
+                  </div>
+                  <div class="post-date">January 3, 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-content">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Get the latest articles, resources and updates right in your inbox.</p>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3>About InsightfulBlog</h3>
+            <p>A platform for sharing knowledge, ideas, and stories. Join our community of writers and readers.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="all-posts.html">Articles</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-categories">
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="category.html?category=technology">Technology</a></li>
+              <li><a href="category.html?category=lifestyle">Lifestyle</a></li>
+              <li><a href="category.html?category=travel">Travel</a></li>
+              <li><a href="category.html?category=food">Food</a></li>
+              <li><a href="category.html?category=health">Health</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> contact@insightfulblog.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Blog Street, Content City</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 InsightfulBlog. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <h1>Insightful<span>Blog</span></h1>
+      </div>
+      <div class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="mobile-dropdown">
+          <a href="#" class="mobile-dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="category.html?category=technology">Technology</a></li>
+            <li><a href="category.html?category=lifestyle">Lifestyle</a></li>
+            <li><a href="category.html?category=travel">Travel</a></li>
+            <li><a href="category.html?category=food">Food</a></li>
+            <li><a href="category.html?category=health">Health</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-auth-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/posts.js"></script>
+</body>
+</html>

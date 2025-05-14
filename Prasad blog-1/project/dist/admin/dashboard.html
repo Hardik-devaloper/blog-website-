@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - InsightfulBlog</title>
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/dashboard-3b609aea.css">
+  <link rel="stylesheet" href="../assets/responsive-adb240d9.css">
+</head>
+<body class="admin-body">
+  <div class="admin-wrapper">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="admin-logo">
+          <h2>Insightful<span>Blog</span></h2>
+        </div>
+        <div class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="admin-profile">
+        <img src="../assets/images/admin-avatar.jpg" alt="Admin" class="admin-avatar">
+        <div class="admin-info">
+          <h4>John Doe</h4>
+          <span>Administrator</span>
+        </div>
+      </div>
+      <nav class="admin-nav">
+        <ul>
+          <li class="active">
+            <a href="dashboard.html">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="posts.html">
+              <i class="fas fa-file-alt"></i>
+              <span>Posts</span>
+            </a>
+          </li>
+          <li>
+            <a href="create-post.html">
+              <i class="fas fa-plus-circle"></i>
+              <span>Create Post</span>
+            </a>
+          </li>
+          <li>
+            <a href="categories.html">
+              <i class="fas fa-folder"></i>
+              <span>Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="users.html">
+              <i class="fas fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="comments.html">
+              <i class="fas fa-comments"></i>
+              <span>Comments</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="logout">
+            <a href="#" id="admin-logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <!-- Admin Header -->
+      <header class="admin-header">
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="admin-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="admin-actions">
+          <div class="action-item">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+          </div>
+          <div class="action-item">
+            <i class="fas fa-envelope"></i>
+            <span class="badge">5</span>
+          </div>
+          <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </div>
+          <a href="../index.html" class="view-site">
+            <i class="fas fa-external-link-alt"></i>
+            <span>View Site</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="admin-content">
+        <div class="page-header">
+          <h1>Dashboard</h1>
+          <p>Welcome back, John! Here's what's happening with your blog today.</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: rgba(51, 102, 204, 0.1);">
+              <i class="fas fa-file-alt" style="color: var(--primary);"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Total Posts</h3>
+              <p class="stat-value">127</p>
+              <p class="stat-change positive">
+                <i class="fas fa-arrow-up"></i> 12% from last month
+              </p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: rgba(255, 119, 0, 0.1);">
+              <i class="fas fa-users" style="color: var(--secondary);"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Total Users</h3>
+              <p class="stat-value">1,285</p>
+              <p class="stat-change positive">
+                <i class="fas fa-arrow-up"></i> 8% from last month
+              </p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: rgba(40, 167, 69, 0.1);">
+              <i class="fas fa-eye" style="color: var(--success);"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Total Views</h3>
+              <p class="stat-value">35,621</p>
+              <p class="stat-change positive">
+                <i class="fas fa-arrow-up"></i> 24% from last month
+              </p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: rgba(220, 53, 69, 0.1);">
+              <i class="fas fa-comments" style="color: var(--danger);"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Comments</h3>
+              <p class="stat-value">852</p>
+              <p class="stat-change negative">
+                <i class="fas fa-arrow-down"></i> 3% from last month
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="chart-section">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Traffic Overview</h3>
+              <div class="chart-filter">
+                <select>
+                  <option value="7days">Last 7 Days</option>
+                  <option value="30days" selected>Last 30 Days</option>
+                  <option value="90days">Last 90 Days</option>
+                  <option value="year">This Year</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-container" id="traffic-chart">
+              <!-- Chart will be rendered here by JS -->
+              <div class="chart-placeholder">
+                <div class="placeholder-lines">
+                  <div class="placeholder-line"></div>
+                  <div class="placeholder-line"></div>
+                  <div class="placeholder-line"></div>
+                  <div class="placeholder-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Popular Categories</h3>
+              <div class="chart-filter">
+                <select>
+                  <option value="views" selected>By Views</option>
+                  <option value="posts">By Posts</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-container" id="categories-chart">
+              <!-- Chart will be rendered here by JS -->
+              <div class="chart-placeholder-pie">
+                <div class="placeholder-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Posts -->
+        <div class="recent-section">
+          <div class="section-header">
+            <h2>Recent Posts</h2>
+            <a href="posts.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Views</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="post-cell">
+                      <div class="post-thumbnail-small" style="background-image: url('https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"></div>
+                      <div class="post-title">10 Essential Tips for Modern Web Development</div>
+                    </div>
+                  </td>
+                  <td>John Doe</td>
+                  <td><span class="category-badge technology">Technology</span></td>
+                  <td>Jan 15, 2025</td>
+                  <td>1,285</td>
+                  <td><span class="status-badge published">Published</span></td>
+                  <td>
+                    <div class="table-actions">
+                      <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                      <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="post-cell">
+                      <div class="post-thumbnail-small" style="background-image: url('https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"></div>
+                      <div class="post-title">How to Create a Perfect Morning Routine</div>
+                    </div>
+                  </td>
+                  <td>Emily Johnson</td>
+                  <td><span class="category-badge lifestyle">Lifestyle</span></td>
+                  <td>Jan 13, 2025</td>
+                  <td>974</td>
+                  <td><span class="status-badge published">Published</span></td>
+                  <td>
+                    <div class="table-actions">
+                      <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                      <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="post-cell">
+                      <div class="post-thumbnail-small" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"></div>
+                      <div class="post-title">5 Delicious Plant-Based Recipes for Beginners</div>
+                    </div>
+                  </td>
+                  <td>Sarah Wilson</td>
+                  <td><span class="category-badge food">Food</span></td>
+                  <td>Jan 10, 2025</td>
+                  <td>821</td>
+                  <td><span class="status-badge published">Published</span></td>
+                  <td>
+                    <div class="table-actions">
+                      <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                      <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="post-cell">
+                      <div class="post-thumbnail-small" style="background-image: url('https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"></div>
+                      <div class="post-title">The Future of AI in Content Creation</div>
+                    </div>
+                  </td>
+                  <td>Michael Chen</td>
+                  <td><span class="category-badge technology">Technology</span></td>
+                  <td>Jan 09, 2025</td>
+                  <td>713</td>
+                  <td><span class="status-badge draft">Draft</span></td>
+                  <td>
+                    <div class="table-actions">
+                      <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                      <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="post-cell">
+                      <div class="post-thumbnail-small" style="background-image: url('https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"></div>
+                      <div class="post-title">Hidden Gems: Underrated Travel Destinations for 2025</div>
+                    </div>
+                  </td>
+                  <td>Jessica Lee</td>
+                  <td><span class="category-badge travel">Travel</span></td>
+                  <td>Jan 07, 2025</td>
+                  <td>629</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td>
+                    <div class="table-actions">
+                      <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                      <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent Comments -->
+        <div class="recent-section">
+          <div class="section-header">
+            <h2>Recent Comments</h2>
+            <a href="comments.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="comments-container">
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-author">
+                  <img src="../assets/images/user1.jpg" alt="User" class="comment-avatar">
+                  <div class="author-info">
+                    <h4>Robert Johnson</h4>
+                    <span>2 hours ago on <a href="#">10 Essential Tips for Modern Web Development</a></span>
+                  </div>
+                </div>
+                <div class="comment-status">
+                  <span class="status-badge approved">Approved</span>
+                </div>
+              </div>
+              <div class="comment-content">
+                <p>This article was incredibly helpful! I've been struggling with optimizing my workflow, and your tips about using modern tools really opened my eyes. Looking forward to implementing these changes.</p>
+              </div>
+              <div class="comment-actions">
+                <button class="btn btn-sm btn-outline"><i class="fas fa-reply"></i> Reply</button>
+                <button class="btn btn-sm btn-outline"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-author">
+                  <img src="../assets/images/user2.jpg" alt="User" class="comment-avatar">
+                  <div class="author-info">
+                    <h4>Linda Martinez</h4>
+                    <span>5 hours ago on <a href="#">How to Create a Perfect Morning Routine</a></span>
+                  </div>
+                </div>
+                <div class="comment-status">
+                  <span class="status-badge pending">Pending</span>
+                </div>
+              </div>
+              <div class="comment-content">
+                <p>I've been trying different morning routines for months, and I'm excited to try your approach. The section about mindfulness before checking emails resonated with me. Have you found that it affects your productivity throughout the day?</p>
+              </div>
+              <div class="comment-actions">
+                <button class="btn btn-sm btn-outline"><i class="fas fa-check"></i> Approve</button>
+                <button class="btn btn-sm btn-outline"><i class="fas fa-reply"></i> Reply</button>
+                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-author">
+                  <img src="../assets/images/user3.jpg" alt="User" class="comment-avatar">
+                  <div class="author-info">
+                    <h4>David Wilson</h4>
+                    <span>Yesterday on <a href="#">5 Delicious Plant-Based Recipes for Beginners</a></span>
+                  </div>
+                </div>
+                <div class="comment-status">
+                  <span class="status-badge approved">Approved</span>
+                </div>
+              </div>
+              <div class="comment-content">
+                <p>I tried the chickpea curry recipe last night and it was amazing! Even my meat-loving husband enjoyed it. Could you share more recipes that are high in protein but plant-based? Thanks for this great content!</p>
+              </div>
+              <div class="comment-actions">
+                <button class="btn btn-sm btn-outline"><i class="fas fa-reply"></i> Reply</button>
+                <button class="btn btn-sm btn-outline"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

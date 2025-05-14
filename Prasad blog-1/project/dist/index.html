@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightfulBlog - Share Your Thoughts</title>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/responsive-adb240d9.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header Section -->
+    <header id="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html">
+              <h1>Insightful<span>Blog</span></h1>
+            </a>
+          </div>
+          <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="category.html?category=technology">Technology</a></li>
+                  <li><a href="category.html?category=lifestyle">Lifestyle</a></li>
+                  <li><a href="category.html?category=travel">Travel</a></li>
+                  <li><a href="category.html?category=food">Food</a></li>
+                  <li><a href="category.html?category=health">Health</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="auth-buttons">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+          </div>
+          <div class="auth-profile hidden">
+            <div class="profile-dropdown">
+              <img src="assets/images/default-avatar.jpg" alt="Profile" class="profile-img">
+              <i class="fas fa-chevron-down"></i>
+              <div class="profile-dropdown-menu">
+                <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                <a href="my-posts.html"><i class="fas fa-file-alt"></i> My Posts</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Discover Stories, Ideas, and Expertise</h1>
+          <p>Join our community of writers and readers to explore the world through words.</p>
+          <div class="hero-search">
+            <input type="text" placeholder="Search for articles...">
+            <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Articles</h2>
+          <a href="all-posts.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="featured-grid" id="featured-posts-container">
+          <!-- Featured posts will be loaded dynamically -->
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Explore Categories</h2>
+        </div>
+        <div class="categories-grid">
+          <a href="category.html?category=technology" class="category-card" style="background-image: url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+            <div class="category-content">
+              <h3>Technology</h3>
+              <span>42 Articles</span>
+            </div>
+          </a>
+          <a href="category.html?category=lifestyle" class="category-card" style="background-image: url('https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+            <div class="category-content">
+              <h3>Lifestyle</h3>
+              <span>38 Articles</span>
+            </div>
+          </a>
+          <a href="category.html?category=travel" class="category-card" style="background-image: url('https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+            <div class="category-content">
+              <h3>Travel</h3>
+              <span>27 Articles</span>
+            </div>
+          </a>
+          <a href="category.html?category=food" class="category-card" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+            <div class="category-content">
+              <h3>Food</h3>
+              <span>19 Articles</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="latest-posts">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest Articles</h2>
+          <a href="all-posts.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="posts-grid" id="latest-posts-container">
+          <!-- Latest posts will be loaded dynamically -->
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+        <div class="load-more">
+          <button class="btn btn-outline" id="load-more-btn">Load More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-content">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Get the latest articles, resources and updates right in your inbox.</p>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3>About InsightfulBlog</h3>
+            <p>A platform for sharing knowledge, ideas, and stories. Join our community of writers and readers.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="all-posts.html">Articles</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-categories">
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="category.html?category=technology">Technology</a></li>
+              <li><a href="category.html?category=lifestyle">Lifestyle</a></li>
+              <li><a href="category.html?category=travel">Travel</a></li>
+              <li><a href="category.html?category=food">Food</a></li>
+              <li><a href="category.html?category=health">Health</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> contact@insightfulblog.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Blog Street, Content City</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 InsightfulBlog. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <h1>Insightful<span>Blog</span></h1>
+      </div>
+      <div class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="mobile-dropdown">
+          <a href="#" class="mobile-dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="category.html?category=technology">Technology</a></li>
+            <li><a href="category.html?category=lifestyle">Lifestyle</a></li>
+            <li><a href="category.html?category=travel">Travel</a></li>
+            <li><a href="category.html?category=food">Food</a></li>
+            <li><a href="category.html?category=health">Health</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-auth-buttons">
+      <a href="login.html" class="btn btn-secondary">Log In</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/posts.js"></script>
+</body>
+</html>
